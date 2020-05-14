@@ -7,7 +7,7 @@ You can find the description of an initial version of the corpus here: [https://
 The corpus is provided in two formats - AVRO and JSON, with train/dev/test splits. For details on the schema used for storing annotations, see below. Due to Github storage limitations, we offer two versions of the corpus - a version without geo-information which is included in this repository, and an externally hosted version which includes WKB data (and is hence much larger, ~1.2GB) :
 
  * [Daystream Corpus Version 1 (May 2020) - without geo-information](v1_20200511/)
- * [Daystream Corpus Version 1 (May 2020) - with geo-information](https://cloud.dfki.de)
+ * [Daystream Corpus Version 1 (May 2020) - with geo-information](https://cloud.dfki.de/owncloud/index.php/s/BXgDHP8Ad54Koe6)
 
 ## Dataset Statistics
 
