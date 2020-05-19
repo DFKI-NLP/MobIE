@@ -25,7 +25,7 @@ The corpus is provided in two formats - AVRO and JSON, with train/dev/test split
 
 ## Use
 
-The DFKI Daystream Corpus is released as [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). If you use this data, you should cite one of the following publication(s):
+The DFKI Daystream Corpus is released as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). If you use this data, you should cite one of the following publication(s):
 
 _A German Corpus for Fine-Grained Named Entity Recognition and Relation Extraction of Traffic and Industry Events. Martin Schiersch, Veselina Mironova, Maximilian Schmitt, Philippe Thomas, Aleksandra Gabryszak, Leonhard Hennig. Proceedings of LREC, 2018._ [(bib)](paper.bib) [(pdf)](https://www.dfki.de/fileadmin/user_upload/import/9427_lrec_smartdata_corpus.pdf)
 
