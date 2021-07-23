@@ -18,7 +18,9 @@ For details on the schema used for storing annotations, see below. Due to Github
 | tokens | 69188 | 34630 | 103818 |
 | entities | 15407 | 8154 | 23561 |
 | relations | 1719 | 651 | 2370 |
-| linked entities (org,loc) | 9909 | 5034 | 14943 |
+| docs with annotated relations | 1179 | 452 | 1631 |
+| linked entities (org,loc) | 5138 | 3331 | 8469 |
+| NIL entities (org|loc) | 4762 | 1699 | 6461 |
 | first-date |	Sat May 23 20:48:32 CEST 2015 |	Fri Jan 08 10:50:49 CET 2016 |	Sat May 23 20:48:32 CEST 2015 |
 | last-date |Mon Apr 01 09:18:25 CEST 2019 |	Sun Mar 31 18:10:05 CEST 2019 |	Mon Apr 01 09:18:25 CEST 2019 |
 
