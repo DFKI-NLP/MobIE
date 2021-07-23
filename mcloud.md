@@ -1,5 +1,5 @@
 ## Titel
-DAYSTREAM Annotierter Textkorpus von Verkehrsmeldungen
+DAYSTREAM Annotierter Textkorpus von Verkehrsmeldungen (v1_20200511)
 
 ## Beschreibung
 Der DAYSTREAM Korpus ist ein Datensatz von 3541 Verkehrsmeldungen, in denen Eigennamen (z.B. Straßen, Linien, Haltestellen), deren Referenzids (z.B. DHID, DLID, OSM-IDs), sowie Relationen (z.B. Stau, Unfall, Schienenersatzverkehr) manuell annotiert sind. Der Datensatz kann als Trainings- bzw. Testkorpus für Informationsextraktionsaufgaben wie Eigennamenerkennung, Entity Linking und Relationsextraktion genutzt werden. 

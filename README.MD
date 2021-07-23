@@ -1,13 +1,14 @@
-# DFKI DAYSTREAM Corpus
+# DFKI MOBIE Corpus
 
-This repository contains the DFKI DAYSTREAM Corpus, a dataset of 3541 German-language documents that have been annotated with fine-grained geo-entities, such as _streets_, _stops_ and _routes_, as well as standard named entity types (organization, date, number, etc). All location-related entities have been linked to either Open Street Map identifiers or database ids of Deutsche Bahn / Rhein-Main-Verkehrsverbund. The corpus has also been annotated with a set of 8 traffic-related n-ary relations and events, such as _Accidents_, _Traffic jams_, and _Canceled Routes_. It consists of Twitter messages, and traffic reports from e.g. radio stations, police and public transport providers. It allows for training and evaluating both named entity recognition algorithms that aim for fine-grained typing of geo-entities, entity linking of these entities, as well as n-ary relation extraction systems.
+This repository contains the DFKI MOBIE Corpus (formerly "DAYSTREAM Corpus"), a dataset of 3541 German-language documents that have been annotated with fine-grained geo-entities, such as _streets_, _stops_ and _routes_, as well as standard named entity types (organization, date, number, etc). All location-related entities have been linked to either Open Street Map identifiers or database ids of Deutsche Bahn / Rhein-Main-Verkehrsverbund. The corpus has also been annotated with a set of 7 traffic-related n-ary relations and events, such as _Accidents_, _Traffic jams_, and _Canceled Routes_. It consists of Twitter messages, and traffic reports from e.g. radio stations, police and public transport providers. It allows for training and evaluating both named entity recognition algorithms that aim for fine-grained typing of geo-entities, entity linking of these entities, as well as n-ary relation extraction systems.
 
-You can find the description of an initial version of the corpus here: [https://www.dfki.de/web/forschung/projekte-publikationen/publikationen/publikation/9427/](https://www.dfki.de/web/forschung/projekte-publikationen/publikationen/publikation/9427/)
+You can find the description of the corpus here: [https://www.dfki.de/web/forschung/projekte-publikationen/publikationen-uebersicht/publikation/11741/](https://www.dfki.de/web/forschung/projekte-publikationen/publikationen-uebersicht/publikation/11741/)
 
-The corpus is provided in two formats - AVRO and JSON, with train/dev/test splits. For details on the schema used for storing annotations, see below. Due to Github storage limitations, we offer two versions of the corpus - a version without geo-information which is included in this repository, and an externally hosted version which includes WKB data (and is hence much larger, ~1.2GB) :
+The corpus is provided in two formats - AVRO and JSONL, with train/dev/test splits.  To ensure a high data quality for evaluating event extraction, we do not include events automatically annotated with Snorkel (see paper) in the provided Test split of the dataset. 
 
- * [Daystream Corpus Version 1 (May 2020) - without geo-information](v1_20200511/)
- * [Daystream Corpus Version 1 (May 2020) - with geo-information](https://cloud.dfki.de/owncloud/index.php/s/BXgDHP8Ad54Koe6)
+For details on the schema used for storing annotations, see below. Due to Github storage limitations, we offer two versions of the corpus - a version without geo-information which is included in this repository, and an externally hosted version which includes WKB data (and is hence much larger, ~1.2GB) :
+
+ * [MobIE Corpus (Jul 2021)](v2_20210723/)
 
 ## Dataset Statistics
 
@@ -15,11 +16,9 @@ The corpus is provided in two formats - AVRO and JSON, with train/dev/test split
 | ---- | ---- | ---- | ---- |
 | docs | 2825| 716 | 3541 |
 | tokens | 69188 | 34630 | 103818 |
-| entities | 15280 | 8112 | 23392 |
-| relations | 365 | 427 | 792 |
-| docs with annotated relations | 305 | 338 | 643 |
-| linked entities (org,loc) | 5138 | 3331 | 8469 |
-| NIL entities | 4764 | 1698 | 6462 |
+| entities | 15407 | 8154 | 23561 |
+| relations | 1719 | 651 | 2370 |
+| linked entities (org,loc) | 9909 | 5034 | 14943 |
 | first-date |	Sat May 23 20:48:32 CEST 2015 |	Fri Jan 08 10:50:49 CET 2016 |	Sat May 23 20:48:32 CEST 2015 |
 | last-date |Mon Apr 01 09:18:25 CEST 2019 |	Sun Mar 31 18:10:05 CEST 2019 |	Mon Apr 01 09:18:25 CEST 2019 |
 
@@ -31,7 +30,7 @@ Send pull requests to submit annotation amendments.
 
 If you use this data, please recognize our hard work and cite the relevant paper:
 
-_A German Corpus for Fine-Grained Named Entity Recognition and Relation Extraction of Traffic and Industry Events. Martin Schiersch, Veselina Mironova, Maximilian Schmitt, Philippe Thomas, Aleksandra Gabryszak, Leonhard Hennig. Proceedings of LREC, 2018._ [(bib)](paper.bib) [(pdf)](https://www.dfki.de/fileadmin/user_upload/import/9427_lrec_smartdata_corpus.pdf)
+_MobIE: A German Dataset for Named Entity Recognition, Entity Linking and Relation Extraction in the Mobility Domain. Leonhard Hennig, Phuc Tran Truong, Aleksandra Gabryszak. Proceedings of KONVENS, 2021._ [(bib)](Konvens_2021_Daystream_Corpus.bib) [(pdf)](Konvens_2021_Daystream_Corpus.pdf)
 
 ## Format
 
@@ -128,4 +127,4 @@ ConceptMentions and RelationMentions are stored at the document level, and for e
 
 ## Annotation Guidelines
 
-[Daystream Corpus Annotation Guidelines v1.0 (Feb 2018)](SmartData_Corpus_Annotation_Guidelines_Feb_2018_v1.0.pdf)
+[MobIE Corpus Annotation Guidelines v1.1 (Jul 2021)](Mobie_Corpus_Annotation_Guidelines_Jul_2021_v1.1.pdf)
