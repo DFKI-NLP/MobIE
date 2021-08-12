@@ -129,7 +129,7 @@ A subset of the relation mentions in the Train and Dev splits of the corpus are 
 List<RelationMention> snorkeledRelations = new ArrayList<RelationMention>();
 for (RelationMention r : doc.getRelationMentions) {
     if (r.getProvenances().get(0).getAnnotator().equals("snorkel")) {
-        snorkeledRelations.
+        snorkeledRelations.add(r);
     }
 }
 ```
@@ -138,4 +138,4 @@ for (RelationMention r : doc.getRelationMentions) {
 
 ## Annotation Guidelines
 
-[MobIE Corpus Annotation Guidelines v1.1 (Jul 2021)](Mobie_Corpus_Annotation_Guidelines_Jul_2021_v1.1.pdf)
+[MobIE Corpus Annotation Guidelines v1.1 (Jul 2021)](MobIE_Corpus_Annotation_Guidelines_Jul_2021_v1.1.pdf)
