@@ -1,6 +1,6 @@
-# DFKI MOBIE Corpus
+# DFKI MobIE Corpus
 
-This repository contains the DFKI MOBIE Corpus (formerly "DAYSTREAM Corpus"), a dataset of 3541 German-language documents that have been annotated with fine-grained geo-entities, such as _streets_, _stops_ and _routes_, as well as standard named entity types (organization, date, number, etc). All location-related entities have been linked to either Open Street Map identifiers or database ids of Deutsche Bahn / Rhein-Main-Verkehrsverbund. The corpus has also been annotated with a set of 7 traffic-related n-ary relations and events, such as _Accidents_, _Traffic jams_, and _Canceled Routes_. It consists of Twitter messages, and traffic reports from e.g. radio stations, police and public transport providers. It allows for training and evaluating both named entity recognition algorithms that aim for fine-grained typing of geo-entities, entity linking of these entities, as well as n-ary relation extraction systems.
+This repository contains the DFKI MobIE Corpus (formerly "DAYSTREAM Corpus"), a dataset of 3,232 German-language documents collected between May 2015 - Apr 2019 that have been annotated with fine-grained geo-entities, such as _location-street_, _location-stop_ and _location-route_, as well as standard named entity types (__organization_, _date_, _number_, etc). All location-related entities have been linked to either Open Street Map identifiers or database ids of Deutsche Bahn / Rhein-Main-Verkehrsverbund. The corpus has also been annotated with a set of 7 traffic-related n-ary relations and events, such as _Accidents_, _Traffic jams_, and _Canceled Routes_. It consists of Twitter messages, and traffic reports from e.g. radio stations, police and public transport providers. It allows for training and evaluating both named entity recognition algorithms that aim for fine-grained typing of geo-entities, entity linking of these entities, as well as n-ary relation extraction systems.
 
 You can find the description of the corpus here: [https://www.dfki.de/web/forschung/projekte-publikationen/publikationen-uebersicht/publikation/11741/](https://www.dfki.de/web/forschung/projekte-publikationen/publikationen-uebersicht/publikation/11741/)
 
@@ -8,19 +8,17 @@ The corpus is provided in two formats - AVRO and JSONL, with train/dev/test spli
 
 For details on the schema used for storing annotations, see below. Due to Github storage limitations, we offer two versions of the corpus - a version without geo-information which is included in this repository, and an externally hosted version which includes WKB data (and is hence much larger, ~1.2GB) :
 
- * [MobIE Corpus (Jul 2021)](v2_20210723/)
+ * [MobIE Corpus (Aug 2021)](v1_20210811/)
 
 ## Dataset Statistics
 
 |  | Twitter | RSS | Total |
 | ---- | ---- | ---- | ---- |
-| docs | 2825| 716 | 3541 |
-| tokens | 69188 | 34630 | 103818 |
-| entities | 15407 | 8154 | 23561 |
-| relations | 1719 | 651 | 2370 |
-| docs with annotated relations | 1179 | 452 | 1631 |
-| linked entities (org,loc) | 5138 | 3331 | 8469 |
-| NIL entities (org|loc) | 4762 | 1699 | 6461 |
+| docs | 2562 | 670 | 3232 |
+| tokens | 62330 | 28641 | 90971 |
+| entities | 13573 | 6911 | 20484 |
+| relations | 1461 | 575 | 2036 |
+| linked entities (org,loc), KB+NIL | 8715 | 4389 | 13104 |
 | first-date |	Sat May 23 20:48:32 CEST 2015 |	Fri Jan 08 10:50:49 CET 2016 |	Sat May 23 20:48:32 CEST 2015 |
 | last-date |Mon Apr 01 09:18:25 CEST 2019 |	Sun Mar 31 18:10:05 CEST 2019 |	Mon Apr 01 09:18:25 CEST 2019 |
 
@@ -44,7 +42,7 @@ You can use the following JAVA tools to read the AVRO version of the corpus:
 
  * [Corpus Reader Tools](sdw-tools-1.0-SNAPSHOT.jar)
 
-To read the corpus, use the following code snippet:
+To read the corpus in AVRO format, use the following code snippet:
 
    ```java
    File inputFile = new File("train.avro");
@@ -124,6 +122,17 @@ ConceptMentions and RelationMentions are stored at the document level, and for e
        // ...
    }
    ```
+
+A subset of the relation mentions in the Train and Dev splits of the corpus are automatically annotated with a weakly supervised labeling approach. These relation mentions can be filtered by their Provenance information:
+
+```java
+List<RelationMention> snorkeledRelations = new ArrayList<RelationMention>();
+for (RelationMention r : doc.getRelationMentions) {
+    if (r.getProvenances().get(0).getAnnotator().equals("snorkel")) {
+        snorkeledRelations.
+    }
+}
+```
 
 
 
