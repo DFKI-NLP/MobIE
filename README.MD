@@ -30,7 +30,7 @@ Send pull requests to submit annotation amendments.
 
 If you use this data, please recognize our hard work and cite the relevant paper:
 
-_MobIE: A German Dataset for Named Entity Recognition, Entity Linking and Relation Extraction in the Mobility Domain. Leonhard Hennig, Phuc Tran Truong, Aleksandra Gabryszak. Proceedings of KONVENS, 2021._ [(bib)](Konvens_2021_Daystream_Corpus.bib) [(pdf)](Konvens_2021_Daystream_Corpus.pdf)
+_MobIE: A German Dataset for Named Entity Recognition, Entity Linking and Relation Extraction in the Mobility Domain. Leonhard Hennig, Phuc Tran Truong, Aleksandra Gabryszak. Proceedings of KONVENS, 2021._ [(bib)](Konvens_2021_MobIE_Corpus.bib) [(pdf)](Konvens_2021_MobIE_Corpus.pdf)
 
 ## Format
 
