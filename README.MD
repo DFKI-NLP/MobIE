@@ -9,6 +9,7 @@ The corpus is provided in two formats - AVRO and JSONL, with train/dev/test spli
 For details on the schema used for storing annotations, see below. Due to Github storage limitations, we offer two versions of the corpus - a version without geo-information which is included in this repository, and an externally hosted version which includes WKB data (and is hence much larger, ~1.2GB) :
 
  * [MobIE Corpus (Aug 2021)](v1_20210811/)
+ * [MobIE Corpus with WKB shapes (Aug 2021)](https://cloud.dfki.de/owncloud/index.php/s/YFqRNKkRDwqZWXG)
 
 ## Dataset Statistics
 
