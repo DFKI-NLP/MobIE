@@ -11,6 +11,10 @@ For details on the schema used for storing annotations, see below. Due to Github
  * [MobIE Corpus (Aug 2021)](v1_20210811/)
  * [MobIE Corpus with WKB shapes (Aug 2021)](https://cloud.dfki.de/owncloud/index.php/s/YFqRNKkRDwqZWXG)
 
+### NER only CONLL2003 formatted version:
+
+- [MobIE NER CONLL2003-formatted (Aug 2021)](v1_20210811/ner_conll03_formatted.zip)
+
 ## Dataset Statistics
 
 |  | Twitter | RSS | Total |
