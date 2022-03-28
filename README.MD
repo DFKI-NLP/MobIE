@@ -2,7 +2,7 @@
 
 This repository contains the DFKI MobIE Corpus (formerly "DAYSTREAM Corpus"), a dataset of 3,232 German-language documents collected between May 2015 - Apr 2019 that have been annotated with fine-grained geo-entities, such as _location-street_, _location-stop_ and _location-route_, as well as standard named entity types (_organization_, _date_, _number_, etc). All location-related entities have been linked to either Open Street Map identifiers or database ids of Deutsche Bahn / Rhein-Main-Verkehrsverbund. The corpus has also been annotated with a set of 7 traffic-related n-ary relations and events, such as _Accidents_, _Traffic jams_, and _Canceled Routes_. It consists of Twitter messages, and traffic reports from e.g. radio stations, police and public transport providers. It allows for training and evaluating both named entity recognition algorithms that aim for fine-grained typing of geo-entities, entity linking of these entities, as well as n-ary relation extraction systems.
 
-You can find the description of the corpus here: [https://www.dfki.de/web/forschung/projekte-publikationen/publikationen-uebersicht/publikation/11741/](https://www.dfki.de/web/forschung/projekte-publikationen/publikationen-uebersicht/publikation/11741/)
+You can find the description of the corpus here: [https://aclanthology.org/2021.konvens-1.22/](https://aclanthology.org/2021.konvens-1.22/)
 
 The corpus is provided in two formats - AVRO and JSONL, with train/dev/test splits.  To ensure a high data quality for evaluating event extraction, we do not include events automatically annotated with Snorkel (see paper) in the provided Test split of the dataset. 
 
