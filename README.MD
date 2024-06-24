@@ -17,15 +17,15 @@ For details on the schema used for storing annotations, see below. Due to Github
 
 ## Dataset Statistics
 
-|  | Twitter | RSS | Total |
-| ---- | ---- | ---- | ---- |
-| docs | 2562 | 670 | 3232 |
-| tokens | 62330 | 28641 | 90971 |
-| entities | 13573 | 6911 | 20484 |
-| relations | 1461 | 575 | 2036 |
-| linked entities (org,loc), KB+NIL | 8715 | 4389 | 13104 |
-| first-date |	Sat May 23 20:48:32 CEST 2015 |	Fri Jan 08 10:50:49 CET 2016 |	Sat May 23 20:48:32 CEST 2015 |
-| last-date |Mon Apr 01 09:18:25 CEST 2019 |	Sun Mar 31 18:10:05 CEST 2019 |	Mon Apr 01 09:18:25 CEST 2019 |
+|                                   | Twitter                        | RSS                            | Total                          |
+|-----------------------------------|--------------------------------|--------------------------------|--------------------------------|
+| docs                              | 2562                           | 670                            | 3232                           |
+| tokens                            | 62330                          | 28641                          | 90971                          |
+| entities                          | 13573                          | 6911                           | 20484                          |
+| relations                         | 1461                           | 575                            | 2036                           |
+| linked entities (org,loc), KB+NIL | 8715                           | 4389                           | 13104                          |
+| first-date                        | 	Sat May 23 20:48:32 CEST 2015 | 	Fri Jan 08 10:50:49 CET 2016  | 	Sat May 23 20:48:32 CEST 2015 |
+| last-date                         | Mon Apr 01 09:18:25 CEST 2019  | 	Sun Mar 31 18:10:05 CEST 2019 | 	Mon Apr 01 09:18:25 CEST 2019 |
 
 ## Usage and Attribution
 
